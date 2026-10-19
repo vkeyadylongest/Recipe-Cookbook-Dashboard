@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 2.4rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.recipe-card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.recipe-title {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 12px;
+}
+
+.recipe-meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #555;
+}
+
+.difficulty {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+}
+
+.difficulty.easy {
+    background: #27ae60;
+}
+
+.difficulty.medium {
+    background: #f39c12;
+}
+
+.difficulty.hard {
+    background: #e74c3c;
+}
+
+.ingredients-title {
+    font-size: 1rem;
+    color: #34495e;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.ingredients-list {
+    list-style: none;
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+.ingredients-list li {
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.ingredients-list li:last-child {
+    border-bottom: none;
+}
+
+.cooking-time {
+    font-size: 0.95rem;
+    color: #7f8c8d;
+    margin-top: auto;
+}
