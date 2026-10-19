@@ -1,33 +1,33 @@
 const recipes = [
     {
-        title: "Classic Margherita Pizza",
-        ingredients: ["Pizza dough", "Tomato sauce", "Fresh mozzarella", "Basil leaves", "Olive oil", "Salt"],
-        cookingTime: 25 // minutes
+        title: "Ugali with Sukuma Wiki",
+        ingredients: ["Maize flour", "Water", "Sukuma wiki (collard greens)", "Onion", "Tomato", "Cooking oil", "Salt"],
+        cookingTime: 35
     },
     {
-        title: "Chicken Stir Fry",
-        ingredients: ["Chicken breast", "Broccoli", "Bell peppers", "Soy sauce", "Garlic", "Ginger", "Sesame oil", "Rice"],
-        cookingTime: 30
+        title: "Nyama Choma",
+        ingredients: ["Beef or goat meat", "Salt", "Black pepper", "Garlic", "Ginger", "Cooking oil", "Lemon"],
+        cookingTime: 60
     },
     {
-        title: "Avocado Toast",
-        ingredients: ["Bread", "Avocado", "Salt", "Pepper", "Chili flakes"],
-        cookingTime: 10
+        title: "Chapati",
+        ingredients: ["Wheat flour", "Water", "Cooking oil", "Salt", "Sugar"],
+        cookingTime: 40
     },
     {
-        title: "Beef Lasagna",
-        ingredients: ["Lasagna sheets", "Ground beef", "Tomato sauce", "Onion", "Garlic", "Ricotta cheese", "Mozzarella", "Parmesan", "Bechamel sauce", "Italian herbs"],
-        cookingTime: 75
+        title: "Githeri",
+        ingredients: ["Maize", "Beans", "Onion", "Tomato", "Cooking oil", "Salt", "Carrot", "Potato"],
+        cookingTime: 50
     },
     {
-        title: "Banana Smoothie",
-        ingredients: ["Banana", "Milk", "Honey", "Ice cubes"],
-        cookingTime: 5
+        title: "Pilau",
+        ingredients: ["Basmati rice", "Beef", "Onion", "Garlic", "Ginger", "Pilau masala", "Cooking oil", "Salt", "Cinnamon", "Cardamom"],
+        cookingTime: 55
     },
     {
-        title: "Grilled Salmon",
-        ingredients: ["Salmon fillet", "Lemon", "Garlic", "Olive oil", "Dill", "Salt", "Pepper"],
-        cookingTime: 20
+        title: "Mukimo",
+        ingredients: ["Potato", "Maize", "Peas", "Pumpkin leaves", "Salt", "Cooking oil"],
+        cookingTime: 45
     }
 ];
 
@@ -43,6 +43,7 @@ function calculateDifficulty(ingredientsCount, cookingTime) {
 // Function to create and display recipe cards
 function displayRecipes() {
     const container = document.getElementById("recipe-container");
+    container.innerHTML = ""; // Clear previous cards
 
     recipes.forEach(recipe => {
         const difficulty = calculateDifficulty(recipe.ingredients.length, recipe.cookingTime);
